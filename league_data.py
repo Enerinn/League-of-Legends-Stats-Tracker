@@ -75,6 +75,7 @@ def get_match_history(match_id_list):
         all_kda.append(get_match_kda(match_stats))
         all_match_outcome.append(get_match_outcome(match_stats))
     
+    # the spacing may be off since it was originally designed to print in discord
     data = "```{:>8} {:>12} {:>12} {:>12} {:>16}```".format("Champion", "K/D/A", "Result", "CS", "Time\n")
     for i in range(len(all_match_outcome)):
         minutes, seconds = divmod(all_match_outcome[i]["time"], 60)
